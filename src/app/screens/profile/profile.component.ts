@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 export const PROFILE_ERRORS = {
   name: {
@@ -53,7 +54,10 @@ export class ProfileComponent implements OnInit {
     }
   ];
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(
+    private formBuilder: FormBuilder,
+    private router: Router
+  ) { }
 
   ngOnInit() {
     this.initForm();
@@ -76,7 +80,9 @@ export class ProfileComponent implements OnInit {
   }
 
   onSubmit() {
-    console.warn(this.form.value);
+    if (this.form.valid) {
+      this.router.navigate(['home']);
+    }
   }
 
   onCancel() {
