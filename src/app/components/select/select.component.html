@@ -5,7 +5,7 @@
     <option value="">Seleccionar</option>
     <option *ngFor="let option of options" [value]="option.id">{{ option.name }}</option>
   </select>
-  <span class="error-message" [id]="idError" *ngIf="showError && errorMessage">
+  <span class="error-message" [id]="idError" data-cy="errorMessageSelect" *ngIf="showError && errorMessage">
     {{ errorMessage }}
   </span>
 </div>

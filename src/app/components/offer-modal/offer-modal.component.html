@@ -1,4 +1,4 @@
-<div id="offer-modal" class="modal" [ngClass]="{'opened': opened}">
+<div id="offer-modal" data-cy="offer-modal" class="modal" [ngClass]="{'opened': opened}">
   <div class="modal-content">
     <span class="close" (click)="close()">&times;</span>
     <div class="offer-main-info">
@@ -11,8 +11,8 @@
       <span class="info"><i class="material-icons">business</i>{{ offer.local }}</span>
       <span class="info"><i class="material-icons">location_on</i>{{ offer.address }}</span>
     </div>
-    <app-input id="coupon" class="offer-coupon" label="Cupón de descuento" [formControl]="couponControl">
+    <app-input id="coupon" data-cy="coupon" class="offer-coupon" label="Cupón de descuento" [formControl]="couponControl">
     </app-input>
-    <button type="button" id="order-confirm" class="button success" (click)="confirmOder()">Confirmar pedido</button>
+    <button type="button" id="order-confirm" data-cy="order-confirm" class="button success" (click)="confirmOder()">Confirmar pedido</button>
   </div>
 </div>

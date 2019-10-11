@@ -3,22 +3,22 @@
   <div class="profile-content">
     <h1 class="app-title">Información Personal</h1>
     <form class="profile-form" [formGroup]="form" (ngSubmit)="onSubmit()" autocomplete="off">
-      <app-file-upload id="image" label="Imagen" formControlName="image" [errorMessage]="getErrorMessage('image')">
+      <app-file-upload id="image" data-cy="image" label="Imagen" formControlName="image" [errorMessage]="getErrorMessage('image')">
       </app-file-upload>
       <div class="profile-form-fields">
-        <app-input id="name" label="Nombre" formControlName="name" [errorMessage]="getErrorMessage('name')"></app-input>
-        <app-input id="lastName" label="Apellido" formControlName="lastname"></app-input>
-        <app-date-input id="bornDate" label="Fecha de Nacimiento" formControlName="birthday"
+        <app-input id="name" data-cy="name" label="Nombre" formControlName="name" [errorMessage]="getErrorMessage('name')"></app-input>
+        <app-input id="lastName" data-cy="lastName" label="Apellido" formControlName="lastname"></app-input>
+        <app-date-input id="bornDate" data-cy="bornDate" label="Fecha de Nacimiento" formControlName="birthday"
           [errorMessage]="getErrorMessage('birthday')"></app-date-input>
-        <app-select id="country" label="País" formControlName="country" [errorMessage]="getErrorMessage('country')"
+        <app-select id="country" data-cy="country" label="País" formControlName="country" [errorMessage]="getErrorMessage('country')"
           [options]="countries"></app-select>
         <app-radio-input label="Sexo" formControlName="gender" [options]="genders"
           [errorMessage]="getErrorMessage('gender')"></app-radio-input>
       </div>
       <div class="profile-form-buttons">
-        <button id="cancel-changes" class="button danger profile-button" (click)="onCancel()" *ngIf="!form.pristine"
+        <button id="cancel-changes" data-cy="cancel-changes" class="button danger profile-button" (click)="onCancel()" *ngIf="!form.pristine"
           type="button">Cancelar</button>
-        <button id="save-profile" class="button success profile-button" type="submit">Guardar</button>
+        <button id="save-profile" data-cy="save-profile" class="button success profile-button" type="submit">Guardar</button>
       </div>
     </form>
   </div>

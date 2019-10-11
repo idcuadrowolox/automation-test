@@ -1,4 +1,4 @@
-<div id="coupon-modal" class="modal" [ngClass]="{'opened': opened}">
+<div id="coupon-modal" data-cy="coupon-modal" class="modal" [ngClass]="{'opened': opened}">
   <div class="modal-content">
     <span class="close" (click)="close()">&times;</span>
     <span id="coupon-code" class="coupon-code">{{ couponCode }}</span>

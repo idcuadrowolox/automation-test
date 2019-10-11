@@ -8,19 +8,19 @@
       <thead>
         <tr>
           <th class="sort-col" (click)="updateOffers(SORT_BY.DATE)">
-            <span id="date-order" class="sort-col-title" [ngClass]="resolveSortClass(SORT_BY.DATE)">
+            <span id="date-order" data-cy="date-order" class="sort-col-title" [ngClass]="resolveSortClass(SORT_BY.DATE)">
               Fecha
             </span>
           </th>
           <th>Descripción</th>
           <th class="sort-col" (click)="updateOffers(SORT_BY.PRICE)">
-            <span id="price-order" class="sort-col-title" [ngClass]="resolveSortClass(SORT_BY.PRICE)">
+            <span id="price-order" date-order="price-order" class="sort-col-title" [ngClass]="resolveSortClass(SORT_BY.PRICE)">
               Precio
             </span>
           </th>
           <th>Costo de Envío</th>
           <th class="sort-col" (click)="updateOffers(SORT_BY.LOCAL)">
-            <span id="comerce-order" class="sort-col-title" [ngClass]="resolveSortClass(SORT_BY.LOCAL)">
+            <span id="comerce-order" data-cy="comerce-order" class="sort-col-title" [ngClass]="resolveSortClass(SORT_BY.LOCAL)">
               Comercio
             </span>
           </th>

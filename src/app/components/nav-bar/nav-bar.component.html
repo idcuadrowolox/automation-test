@@ -7,7 +7,7 @@
   <ul class="nav-bar-account">
     <li class="nav-bar-item">
       <ng-container *ngIf="showFreeCouponButton(); else username">
-        <button id="welcome-coupon" class="button danger coupon-button" (click)="openCouponModal()">Obtener cupón de
+        <button id="welcome-coupon" data-cy="welcome-coupon" class="button danger coupon-button" (click)="openCouponModal()">Obtener cupón de
           bienvenida</button>
       </ng-container>
       <ng-template #username>

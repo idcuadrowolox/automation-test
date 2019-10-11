@@ -5,7 +5,7 @@
       [formControl]="formControl?.control" [name]="radioName">
     <span class="radio-label" [ngClass]="{'hasError': (showError && errorMessage)}">{{ option.name }}</span>
   </label>
-  <span class="error-message" [id]="idError" *ngIf="showError && errorMessage">
+  <span class="error-message" [id]="idError" data-cy="errorMessageRadio" *ngIf="showError && errorMessage">
     {{ errorMessage }}
   </span>
 </div>
